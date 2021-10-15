@@ -72,6 +72,16 @@ public class VerifyUsernameAuthenticatorFactory implements AuthenticatorFactory 
         property.setHelpText("External service client id");
         configProperties.add(property);
 
+
+        // Get User Details URL ...
+        property = new ProviderConfigProperty();
+        property.setName("external.file_id");
+        property.setLabel("Raw File Payload");
+        property.setType(ProviderConfigProperty.FILE_TYPE);
+        property.setHelpText("External service client id");
+        configProperties.add(property);
+
+
         return configProperties;
     }
 
