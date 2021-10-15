@@ -14,3 +14,6 @@ ARG CODELENS_THEME_LOCAL_ROOT_DIR=themes/codelens
 RUN mkdir ${CODELENS_THEME_BASE_DIR}
 
 COPY ${CODELENS_THEME_LOCAL_ROOT_DIR} ${CODELENS_THEME_BASE_DIR}
+
+# COPY THE SCIM EAR FILE
+COPY scim-for-keycloak-kc-15-b1.ear /opt/jboss/keycloak/standalone/deployments
