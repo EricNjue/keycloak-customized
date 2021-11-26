@@ -15,5 +15,10 @@ RUN mkdir ${CODELENS_THEME_BASE_DIR}
 
 COPY ${CODELENS_THEME_LOCAL_ROOT_DIR} ${CODELENS_THEME_BASE_DIR}
 
+COPY customization/standalone.xml /opt/jboss/keycloak/standalone/configuration/
+COPY customization/standalone-ha.xml /opt/jboss/keycloak/standalone/configuration/
+
+# Copy the certificate to a folder
+
 # COPY THE SCIM EAR FILE
 COPY scim-for-keycloak-kc-15-b1.ear /opt/jboss/keycloak/standalone/deployments
